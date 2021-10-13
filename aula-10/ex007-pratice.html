@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 1em 'sans-serif';
+        }
+        div {
+            width:400px;
+        }
+        p#center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Treinamento os conhecimentos</h1>
+    <p>Faça sua conta matemática!</p>
+    <label for="n1"> Primeiro valor: 
+        <input type="number" name="n1" id="n1"> 
+    </label> </br>
+    <p id="center">+</p>
+    <label for="n2"> Segundo valor: 
+        <input type="number" name="n2" id="n2">
+    </label>
+    <input type="button" value="Somar" onclick="somar()">
+    <p class="res">Resultado:</p>
+    </div>
+    <script>
+        function somar() {
+            var n1 = window.document.querySelector('input#n1')
+            var n2 = window.document.querySelector('input#n2')
+            var res = window.document.querySelector('p.res')
+            var valor1 = Number(n1.value)
+            var valor2 = Number(n2.value)
+            soma = valor1 + valor2 
+            res.innerText = `O resultaod da soma de ${valor1} e ${valor2} é igual a ${soma}`
+        }
+
+    </script>
+</body>
+</html>
